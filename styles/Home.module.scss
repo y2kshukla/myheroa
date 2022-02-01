@@ -1,0 +1,58 @@
+@import 'var';
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: $bg;
+}
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    .title {
+        font-size: 72px;
+        font-weight: 600;
+        .rade {
+            font-size: 75px;
+            -webkit-text-stroke: 1px;
+            -webkit-text-stroke-color: white;
+            font-family: sans-serif;
+            color: rgba(0, 0, 0, 0);
+        }
+    }
+    .subtitle {
+        font-size: 36px;
+        margin: 5px 0px 20px;
+    }
+    button {
+        font-size: 30px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        color: $bg;
+        padding: 10px 50px;
+    }
+}
+.change {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 10 !important;
+    transition: width 0.5s ease-in-out 0.2s;
+}
+
+.changeTwo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 10 !important;
+    transition: width 0.5s ease-in-out;
+}
+.changed {
+    width: 100%;
+}

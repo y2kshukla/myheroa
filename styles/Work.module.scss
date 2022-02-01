@@ -1,0 +1,70 @@
+@import 'var';
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: $bg;
+    overflow-x: hidden;
+}
+.ship {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 1.5s ease-in-out;
+    transform: rotate(0deg) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+    z-index: 1;
+    animation: ship 5s ease-in-out 1;
+}
+.rotate {
+    transform: rotate(180deg) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 100vh;
+    position: relative;
+    z-index: 2;
+    .myWork {
+        border: 1px solid #E51E72;
+        width: 150px;
+        height: 250px;
+        background-color: $bg;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+    }
+    .workleft {
+        transform: translateX(-150%);
+    }
+    .workright {
+        transform: translateX(50%);
+    }
+    .abtBtn {
+        outline: none;
+        color: $white;
+        background-color: $bg;
+        border: 1px solid #E51E72;
+        padding: 10px 30px;
+        font-size: 20px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.stars {
+    transform: rotate(-180deg);
+    height: 100vh;
+    width: 99vw;
+    position: absolute;
+    inset: 0;
+}
+
+@keyframes ship {
+    from {
+        margin-left: -1000px;
+        transform: rotate(90deg);
+    }
+    to {
+        margin-left: 0px;
+    }
+}

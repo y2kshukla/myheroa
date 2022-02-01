@@ -1,0 +1,52 @@
+@import 'var';
+.container{
+    z-index: 3;
+    background-color: $bgo;
+    border-bottom: 1px solid $whiteo;
+    height: 70px;
+    color: $white;
+    padding: 0 60px;
+    font-size: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.name {
+    margin-left: 7px;
+}
+.links {
+    .linkList {
+        list-style-type: none;
+        .active {
+            color: $white;
+            font-weight: 500;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -130%;
+                color: $white;
+                background: $white;
+                height: 2px;
+                width: 100%;
+            }
+        }
+        li {
+            margin: 0px 35px;
+            font-size: 0.8em;
+        }
+        .contact {
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                inset: 0;
+                border: 1px solid $white;
+                margin: -3px -15px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
